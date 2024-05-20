@@ -1,0 +1,2533 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"fda_drug regactiondate\",\"fda_drug drugs_approved_each_year\",\"fda_drug highestteapprovalsbyyear\",\"fda_drug mktstatus\",\"fda_drug productcategory\",\"fda_drug sponsor_approval_trends\",\"fda_drug sponsors_rank\",\"fda_drug successfulforms\",\"fda_drug tecode_approvals\",\"fda_drug top_3_highest_approvals\",\"fda_drug top_3_lowest_approvals\",\"fda_drug topmarketingstatus\",\"fda_drug ytrends_succforms\",\"fda_drug ywise_appafter_2010\",\"fda_drug appdoc\",\"fda_drug appdoctype_lookup\",\"fda_drug application\",\"fda_drug chemtypelookup\",\"fda_drug doctype_lookup\",\"fda_drug product\",\"fda_drug product_tecode\",\"fda_drug reviewclass_lookup\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.121.903.0 (23.09)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "e0c68fe0-529a-4d06-bb44-3d58c37cb449",
+        "fromColumn": "ActionDate",
+        "fromTable": "fda_drug regactiondate",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_8c9ea15d-effe-4535-9336-4deb439c968b"
+      },
+      {
+        "name": "401c9013-ab3b-4c51-b757-8dc831f16d2f",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "DocType",
+        "fromTable": "fda_drug appdoc",
+        "toColumn": "AppDocType",
+        "toTable": "fda_drug appdoctype_lookup"
+      },
+      {
+        "name": "a9c19129-eddf-4310-a99a-a2fa475a706f",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "ApplNo",
+        "fromTable": "fda_drug product",
+        "toColumn": "ApplNo",
+        "toTable": "fda_drug application"
+      },
+      {
+        "name": "e796f72a-79ed-4cf5-8631-4b8ea182c484",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "ApplNo",
+        "fromTable": "fda_drug regactiondate",
+        "toColumn": "ApplNo",
+        "toTable": "fda_drug application"
+      },
+      {
+        "name": "ecbf0196-3778-4c07-ba53-887d406f090c",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "DocType",
+        "fromTable": "fda_drug regactiondate",
+        "toColumn": "DocType",
+        "toTable": "fda_drug doctype_lookup"
+      },
+      {
+        "name": "adb9e917-8264-4abd-aed1-ceed5d116ba8",
+        "fromColumn": "ApplNo",
+        "fromTable": "fda_drug topmarketingstatus",
+        "toColumn": "ApplNo",
+        "toTable": "fda_drug application"
+      },
+      {
+        "name": "c1509e1b-b599-45dd-83ef-9726ee4a1d4b",
+        "fromColumn": "ApplNo",
+        "fromTable": "fda_drug ywise_appafter_2010",
+        "toColumn": "ApplNo",
+        "toTable": "fda_drug application"
+      },
+      {
+        "name": "1c1dc4e6-bec3-43a3-a09f-0aa940e0f33b",
+        "fromColumn": "ApplNo",
+        "fromTable": "fda_drug appdoc",
+        "toColumn": "ApplNo",
+        "toTable": "fda_drug application"
+      },
+      {
+        "name": "10c3718a-b84e-4dec-b2ca-21bf4b419cbd",
+        "fromColumn": "ApplNo",
+        "fromTable": "fda_drug product_tecode",
+        "toColumn": "ApplNo",
+        "toTable": "fda_drug application"
+      },
+      {
+        "name": "a3bf1c27-9db6-4d61-ad35-6d1b30a36205",
+        "fromColumn": "Chemical_Type",
+        "fromTable": "fda_drug application",
+        "toColumn": "ChemicalTypeID",
+        "toTable": "fda_drug chemtypelookup"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "fda_drug regactiondate",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApplNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2fb25f9b-ae6c-4ef6-92b4-729643e2e51c",
+            "sourceColumn": "ApplNo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ActionType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2c9c9cd8-796b-4e3b-8593-618f2779bf76",
+            "sourceColumn": "ActionType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "InDocTypeSeqNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "debe1d97-3f75-4b37-8485-69a000849739",
+            "sourceColumn": "InDocTypeSeqNo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "DuplicateCounter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7f6ef5eb-85dd-46ef-ab0a-b7216c8fb9d9",
+            "sourceColumn": "DuplicateCounter",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ActionDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "ab9fc9fe-7c9c-480d-8afa-e891d7f3a0f3",
+            "sourceColumn": "ActionDate",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_8c9ea15d-effe-4535-9336-4deb439c968b"
+                },
+                "isDefault": true,
+                "relationship": "e0c68fe0-529a-4d06-bb44-3d58c37cb449"
+              }
+            ]
+          },
+          {
+            "name": "DocType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "287a569f-cf87-44df-a250-650f7e4b1747",
+            "sourceColumn": "DocType",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ef81ae11-70dc-49c2-8b15-0a043a9bc209",
+        "partitions": [
+          {
+            "name": "fda_drug regactiondate",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_regactiondate = Source{[Schema=\"fda_drug\",Item=\"regactiondate\"]}[Data],",
+                "    #\"Removed Columns\" = Table.RemoveColumns(fda_drug_regactiondate,{\"fda_drug.appdoc(ActionDate)\", \"fda_drug.appdoc(ActionType)\", \"fda_drug.appdoc(ApplNo)\", \"fda_drug.appdoc(DuplicateCounter)\", \"fda_drug.appdoc(InDocTypeSeqNo)\", \"fda_drug.application(ActionType)\", \"fda_drug.application(ApplNo)\", \"fda_drug.doctype_lookup\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Removed Columns\",{\"ApplNo\", \"ActionType\", \"ActionDate\", \"InDocTypeSeqNo\", \"DuplicateCounter\", \"DocType\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Reordered Columns\",{{\"ActionDate\", type datetime}}),",
+                "    #\"Changed Type with Locale\" = Table.TransformColumnTypes(#\"Changed Type\", {{\"ActionDate\", type date}}, \"en-US\")",
+                "in",
+                "    #\"Changed Type with Locale\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_e95f3e44-36eb-46ff-a67a-d577939f3efd",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "df156770-c3ca-4f73-b028-54ddae8aea6f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "da8055aa-3d4e-4152-bdc6-640cb6b2a074",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "54ae9f3c-a8a8-4957-9052-0035471c7869",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "8d58e411-72e9-4e7b-8d2c-dc225c9ea3d6",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "3c1998d3-edea-475a-a70f-0ef02fe81e93",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "60021bbe-2c0b-4ec3-b462-c000100647f8",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "b86a3910-eb6f-430d-8baf-d7d4903be004",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "f755bdc8-74e7-4603-b1f9-415c50d7a3e0",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "2e57181b-3468-4afb-95f4-479e184f42d7",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "930d1fcf-d170-41cb-863f-d86dc7ffca7b",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2ca13b08-fb0f-4587-8354-eda4c7822a04",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "bf5d5ff7-7ce2-4edb-ac41-332191e6f710"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "a743d2db-1414-4e8f-ba41-b664b64780b6",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_e95f3e44-36eb-46ff-a67a-d577939f3efd",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_8c9ea15d-effe-4535-9336-4deb439c968b",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "baad8d03-1d70-48af-810e-3efb5114669d",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "1506ec9b-209a-4037-9bfb-d2d44d014875",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "8b287ed7-755d-4b8e-b0de-8f59801effe6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "d07651a9-5320-4e55-b410-84fe72bd5335",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "5254db38-76bd-487b-9bb1-27bf02dd9bb5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "117f89e8-372a-464e-8768-05fd54138832",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "654abb9b-9f35-4c07-a852-d7501e66a564",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "270483e7-f216-46fc-a421-c297c2759069",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "0bc7a433-5d0d-421e-be21-332835c19aac",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "b0596933-39bb-4126-bbc8-99fe2d2ad5e7",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "1811e536-342b-4001-914b-ccb8743b056b",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "ed8b7606-1394-4aa2-9ac1-515a15323431"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "13c225a2-7fc3-4dbd-a02b-17fdeceeea55",
+        "partitions": [
+          {
+            "name": "LocalDateTable_8c9ea15d-effe-4535-9336-4deb439c968b",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('fda_drug regactiondate'[ActionDate])), 1, 1), Date(Year(MAX('fda_drug regactiondate'[ActionDate])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "fda_drug drugs_approved_each_year",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "approval_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "aa73ac2b-639f-40cf-8cb3-75a484e5bff9",
+            "sourceColumn": "approval_year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "number_of_drugs_approved",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "35ea0a56-a95e-4234-87cd-fb0203b4eb53",
+            "sourceColumn": "number_of_drugs_approved",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "e04cfe1e-2f9a-460b-b424-d986e4ec0186",
+        "partitions": [
+          {
+            "name": "fda_drug drugs_approved_each_year",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_drugs_approved_each_year = Source{[Schema=\"fda_drug\",Item=\"drugs_approved_each_year\"]}[Data]",
+                "in",
+                "    fda_drug_drugs_approved_each_year"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug highestteapprovalsbyyear",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApprovalYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "44294434-84e7-4b38-b811-da04542c7123",
+            "sourceColumn": "ApprovalYear",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "TECode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "807140f2-c996-4a4a-ab78-f0856844a989",
+            "sourceColumn": "TECode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TotalApprovals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bd8c44a9-fd39-497e-b6bf-20dcc9c632a8",
+            "sourceColumn": "TotalApprovals",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "3b6747bb-9fa7-4fbb-8e21-2af92dc63854",
+        "partitions": [
+          {
+            "name": "fda_drug highestteapprovalsbyyear",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_highestteapprovalsbyyear = Source{[Schema=\"fda_drug\",Item=\"highestteapprovalsbyyear\"]}[Data]",
+                "in",
+                "    fda_drug_highestteapprovalsbyyear"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug mktstatus",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ProductMktStatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "655695d5-a17c-4763-ab25-d89af31ea400",
+            "sourceColumn": "ProductMktStatus",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Form",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "874217fd-639d-41ac-8eda-c8b879b6dd0f",
+            "sourceColumn": "Form",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "drugname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d1fd0d3-c1a6-4910-85cc-545011c77a2d",
+            "sourceColumn": "drugname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Dosage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "56ee21cd-8c90-4e33-a67a-43a7aa69c727",
+            "sourceColumn": "Dosage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApprovedDrugs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "05b90d07-e3a3-404b-8758-17465aa26394",
+            "sourceColumn": "ApprovedDrugs",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "1d87aa6b-7524-48af-bd00-58a4641fd534",
+        "partitions": [
+          {
+            "name": "fda_drug mktstatus",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_mktstatus = Source{[Schema=\"fda_drug\",Item=\"mktstatus\"]}[Data]",
+                "in",
+                "    fda_drug_mktstatus"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug productcategory",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Dosage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4558e9c8-d771-45d7-a8d9-adbf4f67dd09",
+            "sourceColumn": "Dosage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Form",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "14ac3f6f-62a9-4c0b-87f1-1fa20144c4db",
+            "sourceColumn": "Form",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductCount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "997274e3-5b96-4c58-885c-b89ffc578fa5",
+            "sourceColumn": "ProductCount",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Total_Dosage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "abeab3d8-773a-4e8e-8cb9-7e30ac322d0e",
+            "sourceColumn": "Total_Dosage",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Avg_Dosage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "6eea969b-d188-4a42-a1dd-6bfd26485531",
+            "sourceColumn": "Avg_Dosage",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "05b750da-6220-4860-bdc7-70ddc9abd5cd",
+        "partitions": [
+          {
+            "name": "fda_drug productcategory",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_productcategory = Source{[Schema=\"fda_drug\",Item=\"productcategory\"]}[Data]",
+                "in",
+                "    fda_drug_productcategory"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug sponsor_approval_trends",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "approval_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9d889be2-bb87-4ed7-bc13-00f4298bac26",
+            "sourceColumn": "approval_year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SponsorApplicant",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ef100025-06d3-4ad6-a3f6-05d646f3af13",
+            "sourceColumn": "SponsorApplicant",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ActionType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1ae2eea7-78f0-4a4e-a1c1-ed267c497315",
+            "sourceColumn": "ActionType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "approval_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "561053b0-4bdd-41ba-9812-fec6eeeb31da",
+            "sourceColumn": "approval_count",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "75086d8d-82b3-4d70-ab91-a7de77b44e15",
+        "partitions": [
+          {
+            "name": "fda_drug sponsor_approval_trends",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_sponsor_approval_trends = Source{[Schema=\"fda_drug\",Item=\"sponsor_approval_trends\"]}[Data]",
+                "in",
+                "    fda_drug_sponsor_approval_trends"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug sponsors_rank",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "approval_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f401a4a4-e9f5-4150-9c9f-ebff00006e77",
+            "sourceColumn": "approval_year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "SponsorApplicant",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d2376fa4-eae3-4e3a-b09d-2f2630e9335e",
+            "sourceColumn": "SponsorApplicant",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ActionType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ad52462b-e8e9-4faf-828c-496cc9b351d9",
+            "sourceColumn": "ActionType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "approval_rank",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ab29b10b-b86b-4bbf-b65f-82e167666a45",
+            "sourceColumn": "approval_rank",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "c2a00322-772b-4126-9e5d-0a1c5f4e26e4",
+        "partitions": [
+          {
+            "name": "fda_drug sponsors_rank",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_sponsors_rank = Source{[Schema=\"fda_drug\",Item=\"sponsors_rank\"]}[Data]",
+                "in",
+                "    fda_drug_sponsors_rank"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug successfulforms",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Dosage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7cf40a91-63cf-4058-9784-f0ddf707c485",
+            "sourceColumn": "Dosage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Form",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f7d681ad-55fd-4448-9100-a7ad1c4c7cb5",
+            "sourceColumn": "Form",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "drugname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6e70e678-e0d5-4c49-a8c6-8431a186c785",
+            "sourceColumn": "drugname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TotalApprovals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9874ac5b-1402-43c6-92a8-35aea7433c0a",
+            "sourceColumn": "TotalApprovals",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "b3ac1156-324b-4094-94e7-641e8ca2d293",
+        "partitions": [
+          {
+            "name": "fda_drug successfulforms",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_successfulforms = Source{[Schema=\"fda_drug\",Item=\"successfulforms\"]}[Data]",
+                "in",
+                "    fda_drug_successfulforms"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug tecode_approvals",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "TECode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4f3a1523-a557-4cbf-8df7-1691e2ddad28",
+            "sourceColumn": "TECode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductMktStatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4f0e0f41-6c6b-4220-877c-d77605e2aecb",
+            "sourceColumn": "ProductMktStatus",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ProductNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ff3c3a57-69d8-4c16-bcfe-0a442caafb1c",
+            "sourceColumn": "ProductNo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "TotalApprovals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "524c1ae5-4c1d-4305-ae75-f84df09b4a29",
+            "sourceColumn": "TotalApprovals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "EarliestApproval",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b35e3ebe-e69b-4859-93c2-1d52da23047f",
+            "sourceColumn": "EarliestApproval",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LatestApproval",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b7643a9c-ab83-4a71-b7be-9af11f6f6acf",
+            "sourceColumn": "LatestApproval",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0470ac8c-b781-4d8c-8f85-03dc84ec2611",
+        "partitions": [
+          {
+            "name": "fda_drug tecode_approvals",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_tecode_approvals = Source{[Schema=\"fda_drug\",Item=\"tecode_approvals\"]}[Data]",
+                "in",
+                "    fda_drug_tecode_approvals"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug top_3_highest_approvals",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "approval_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4438deec-92cd-4328-8321-13814abef266",
+            "sourceColumn": "approval_year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "number_of_drugs_approved",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9cd91390-10ed-44b3-973a-f109f1950a18",
+            "sourceColumn": "number_of_drugs_approved",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "9cc20cc4-7c86-461a-9621-53ac5a740937",
+        "partitions": [
+          {
+            "name": "fda_drug top_3_highest_approvals",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_top_3_highest_approvals = Source{[Schema=\"fda_drug\",Item=\"top_3_highest_approvals\"]}[Data]",
+                "in",
+                "    fda_drug_top_3_highest_approvals"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug top_3_lowest_approvals",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "approval_year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6e16c463-97ae-40e0-b880-ee81048867bc",
+            "sourceColumn": "approval_year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "number_of_drugs_approved",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "31a43d39-223e-422e-befd-7007496da85c",
+            "sourceColumn": "number_of_drugs_approved",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "3f799acc-ce2d-4b9e-aa0b-2d472e0c02e3",
+        "partitions": [
+          {
+            "name": "fda_drug top_3_lowest_approvals",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_top_3_lowest_approvals = Source{[Schema=\"fda_drug\",Item=\"top_3_lowest_approvals\"]}[Data]",
+                "in",
+                "    fda_drug_top_3_lowest_approvals"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug topmarketingstatus",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApplicationYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ca87c11b-6ce3-40c1-b8b3-b11ec7da912a",
+            "sourceColumn": "ApplicationYear",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ApplNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "99da1daa-7744-47ac-8438-f079c5f9d912",
+            "sourceColumn": "ApplNo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TotalApplications",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "78d3e600-cdbc-430c-91ac-4693964f64a1",
+            "sourceColumn": "TotalApplications",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "b358b1e9-29f0-49be-b884-53d941ac19b6",
+        "partitions": [
+          {
+            "name": "fda_drug topmarketingstatus",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_topmarketingstatus = Source{[Schema=\"fda_drug\",Item=\"topmarketingstatus\"]}[Data]",
+                "in",
+                "    fda_drug_topmarketingstatus"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug ytrends_succforms",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApprovalYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "209a29ef-6916-419e-a4fc-6e7d36a49acd",
+            "sourceColumn": "ApprovalYear",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Dosage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71bc01d5-2462-453d-b455-d12ff53e08c7",
+            "sourceColumn": "Dosage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Form",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dc7b262a-b9fe-4e6d-8212-1cd80c8be185",
+            "sourceColumn": "Form",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "drugname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fde18c40-15db-4c8a-b4e2-9168a8f521cd",
+            "sourceColumn": "drugname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TotalApprovals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8c8a2447-ec30-4130-9adf-f936627c87ff",
+            "sourceColumn": "TotalApprovals",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "05a42e61-cb5d-4576-a528-cc500766b561",
+        "partitions": [
+          {
+            "name": "fda_drug ytrends_succforms",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_ytrends_succforms = Source{[Schema=\"fda_drug\",Item=\"ytrends_succforms\"]}[Data]",
+                "in",
+                "    fda_drug_ytrends_succforms"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug ywise_appafter_2010",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApplicationYear",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e7d2e81a-3758-4380-8035-60064d5b4e2a",
+            "sourceColumn": "ApplicationYear",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ProductMktStatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9a807650-32fd-403d-82b4-ce9e3e86b8b7",
+            "sourceColumn": "ProductMktStatus",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ApplNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d0fab2b7-9b16-481f-bbe3-d1ae9e796b3b",
+            "sourceColumn": "ApplNo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TotalApplications",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "dd8400d9-c9be-4a1d-907b-c7a3a95624f6",
+            "sourceColumn": "TotalApplications",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "4da41f20-cf83-4561-8ffe-46029629f4d2",
+        "partitions": [
+          {
+            "name": "fda_drug ywise_appafter_2010",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_ywise_appafter_2010 = Source{[Schema=\"fda_drug\",Item=\"ywise_appafter_2010\"]}[Data]",
+                "in",
+                "    fda_drug_ywise_appafter_2010"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug appdoc",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "AppDocID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3eda694b-8458-4a21-bc42-ce34075b7c61",
+            "sourceColumn": "AppDocID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "ApplNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c2bb9eb8-8eac-4a32-80d2-c2e626487778",
+            "sourceColumn": "ApplNo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SeqNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e38c6894-64d9-45c9-8953-d27db203516c",
+            "sourceColumn": "SeqNo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "DocType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e2c839a5-b008-4c7d-a4dc-a028ef159cc0",
+            "sourceColumn": "DocType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DocTitle",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "507a7807-83ea-4514-a76b-7077443a39ae",
+            "sourceColumn": "DocTitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DocURL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7f223f46-63ed-4013-95cd-eafc7ba9ee95",
+            "sourceColumn": "DocURL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DocDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4e9bc8c5-a500-4aa5-9a9c-e082c0359378",
+            "sourceColumn": "DocDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ActionType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "32bcdd02-346e-4095-b010-5fc2c7b86c6c",
+            "sourceColumn": "ActionType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DuplicateCounter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "696c33fb-2817-44d1-b804-f605e0ebd909",
+            "sourceColumn": "DuplicateCounter",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "c462583b-5419-4d82-abd6-255b6d3f19f9",
+        "partitions": [
+          {
+            "name": "fda_drug appdoc",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_appdoc = Source{[Schema=\"fda_drug\",Item=\"appdoc\"]}[Data]",
+                "in",
+                "    fda_drug_appdoc"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug appdoctype_lookup",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "AppDocType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "451356f1-f7dc-4439-8bf0-ad96e5494593",
+            "sourceColumn": "AppDocType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SortOrder",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6912b8db-11fd-48b7-addb-15bbc1d761e5",
+            "sourceColumn": "SortOrder",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b28dba8e-cffe-48de-afc7-7c30bdd2ac42",
+        "partitions": [
+          {
+            "name": "fda_drug appdoctype_lookup",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_appdoctype_lookup = Source{[Schema=\"fda_drug\",Item=\"appdoctype_lookup\"]}[Data]",
+                "in",
+                "    fda_drug_appdoctype_lookup"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug application",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApplNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "31ce0d68-b384-49c4-9012-0a84db88d842",
+            "sourceColumn": "ApplNo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApplType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f4240c7e-bb6f-4ba5-b5dc-818c3f3ecc27",
+            "sourceColumn": "ApplType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SponsorApplicant",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c73e443f-b04d-48ca-8a6f-12d32a6435f3",
+            "sourceColumn": "SponsorApplicant",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MostRecentLabelAvailableFlag",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aedd3b6a-5984-4867-ba5e-8ac9a06865da",
+            "sourceColumn": "MostRecentLabelAvailableFlag",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurrentPatentFlag",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b5b1a46c-61b4-4a61-b5c3-ea7404a7144f",
+            "sourceColumn": "CurrentPatentFlag",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ActionType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "18fc82eb-7bf6-4e86-b1c8-938d700c08e7",
+            "sourceColumn": "ActionType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Chemical_Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0c2247fc-7655-4315-83a8-3aa23a03a80f",
+            "sourceColumn": "Chemical_Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ther_Potential",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8f063330-5532-49b0-9bd9-28b5c3b6f7f4",
+            "sourceColumn": "Ther_Potential",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Orphan_Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f2d291b5-918c-46dc-b168-353411a26194",
+            "sourceColumn": "Orphan_Code",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1519e9d2-fedd-41ea-b227-8bbc4174c107",
+        "partitions": [
+          {
+            "name": "fda_drug application",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_application = Source{[Schema=\"fda_drug\",Item=\"application\"]}[Data]",
+                "in",
+                "    fda_drug_application"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug chemtypelookup",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ChemicalTypeID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "04b5d156-f718-43e4-b0eb-11a434c57606",
+            "sourceColumn": "ChemicalTypeID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ChemicalTypeCode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6fb87c30-7703-4bbd-bd13-d93257ed3504",
+            "sourceColumn": "ChemicalTypeCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ChemicalTypeDescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3e75ca06-13bf-4c11-ab89-f18af3ba3bae",
+            "sourceColumn": "ChemicalTypeDescription",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d07a019e-b01d-4bec-9f3e-98b975ba5242",
+        "partitions": [
+          {
+            "name": "fda_drug chemtypelookup",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_chemtypelookup = Source{[Schema=\"fda_drug\",Item=\"chemtypelookup\"]}[Data]",
+                "in",
+                "    fda_drug_chemtypelookup"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug doctype_lookup",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DocType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7c75f34b-2c23-4b51-a623-f98186ea4478",
+            "sourceColumn": "DocType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DocTypeDesc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b3365e44-3290-4b1b-970c-e7f47ace80cf",
+            "sourceColumn": "DocTypeDesc",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a10ec204-fdc6-4c7f-a404-6d6b4e8537c4",
+        "partitions": [
+          {
+            "name": "fda_drug doctype_lookup",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_doctype_lookup = Source{[Schema=\"fda_drug\",Item=\"doctype_lookup\"]}[Data]",
+                "in",
+                "    fda_drug_doctype_lookup"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug product",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApplNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "65bcb37c-40f5-4d54-9681-1eafbe04d8cf",
+            "sourceColumn": "ApplNo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "6460bf7d-e58c-4d34-bb91-6dd1d53bb9a5",
+            "sourceColumn": "ProductNo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Form",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "53e369e2-ff75-4f0a-ad00-cda7184453b4",
+            "sourceColumn": "Form",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Dosage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5615e727-0114-4aa4-bc93-69b7b91c1528",
+            "sourceColumn": "Dosage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductMktStatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "53b6616c-bc36-4dff-94e1-3d6c6d110804",
+            "sourceColumn": "ProductMktStatus",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "TECode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "579f5bb1-0b2e-4bdd-904d-11d497a05f37",
+            "sourceColumn": "TECode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ReferenceDrug",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "52e980e3-663e-4d9b-b14c-868d14631f79",
+            "sourceColumn": "ReferenceDrug",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "drugname",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "839d6e1c-936d-4f7c-a84a-4b9e2f50e57f",
+            "sourceColumn": "drugname",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "activeingred",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1944e18c-3e83-4166-b460-29c36ebb4621",
+            "sourceColumn": "activeingred",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "150da867-3310-49f3-8f49-4dbb6aaa09f5",
+        "partitions": [
+          {
+            "name": "fda_drug product",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_product = Source{[Schema=\"fda_drug\",Item=\"product\"]}[Data]",
+                "in",
+                "    fda_drug_product"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug product_tecode",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ApplNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8ae65be4-b7c6-42a0-b126-06fd5ce40129",
+            "sourceColumn": "ApplNo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2d4a6bf2-cbc7-444e-99b4-0e8b3cf78242",
+            "sourceColumn": "ProductNo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "TECode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cc7fb1be-00e5-4686-aa66-744d00d383e5",
+            "sourceColumn": "TECode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TESequence",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "37a3f271-a8d9-439e-b353-d1ca9787055f",
+            "sourceColumn": "TESequence",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ProductMktStatus",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "37ece9d8-5e09-40fa-97c6-e45468630979",
+            "sourceColumn": "ProductMktStatus",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "85ddc07f-a2ea-4c20-899a-239d6b786ddc",
+        "partitions": [
+          {
+            "name": "fda_drug product_tecode",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_product_tecode = Source{[Schema=\"fda_drug\",Item=\"product_tecode\"]}[Data]",
+                "in",
+                "    fda_drug_product_tecode"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "fda_drug reviewclass_lookup",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ReviewClassID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d78e8523-1067-4018-af42-01656859fdb4",
+            "sourceColumn": "ReviewClassID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "ReviewCode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "744ba379-e6ee-41a9-82a8-4e1c3e148e13",
+            "sourceColumn": "ReviewCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LongDescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f47f045d-a3c4-41bd-949a-725f54431154",
+            "sourceColumn": "LongDescription",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ShortDescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b8823795-9729-4120-a2d8-91ff65675537",
+            "sourceColumn": "ShortDescription",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3de3e48d-5c3a-4951-bb09-34eaf8e90294",
+        "partitions": [
+          {
+            "name": "fda_drug reviewclass_lookup",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = MySQL.Database(\"localhost:3306\", \"fda_drug\", [ReturnSingleDatabase=true]),",
+                "    fda_drug_reviewclass_lookup = Source{[Schema=\"fda_drug\",Item=\"reviewclass_lookup\"]}[Data]",
+                "in",
+                "    fda_drug_reviewclass_lookup"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

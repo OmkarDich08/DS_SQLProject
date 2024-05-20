@@ -1,0 +1,181 @@
+{
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.48\",\"type\":2}},\"activeSectionIndex\":5,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "yearly approval trends of drugs",
+      "displayOption": 3,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0a1c5d5cfd294a2da47f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":779,\"y\":0,\"width\":501,\"height\":719,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Highest number of drugs approved in the year 2002 was 5.7k\",\"textStyle\":{\"fontSize\":\"20pt\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Lowest \",\"textStyle\":{\"fontSize\":\"20pt\"}},{\"value\":\"number of drugs approved in the year 1945 was 5\",\"textStyle\":{\"fontSize\":\"26.6667px\"}}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 719.00,
+          "width": 501.00,
+          "x": 779.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6a54f15dffe04dda1f18\",\"layouts\":[{\"id\":0,\"position\":{\"x\":768.75,\"y\":150,\"z\":2000,\"width\":480,\"height\":258.75,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fda_drug top_3_highest_approvals.approval_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fda_drug top_3_highest_approvals.number_of_drugs_approved)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug top_3_highest_approvals\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_year\"},\"Name\":\"fda_drug top_3_highest_approvals.approval_year\",\"NativeReferenceName\":\"approval_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"number_of_drugs_approved\"}},\"Function\":0},\"Name\":\"Sum(fda_drug top_3_highest_approvals.number_of_drugs_approved)\",\"NativeReferenceName\":\"Sum of number_of_drugs_approved\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"number_of_drugs_approved\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"y2Axis\":[{\"properties\":{\"secTitleText\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}],\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 3 Highest Approvals'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 258.75,
+          "width": 480.00,
+          "x": 768.75,
+          "y": 150.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b93064641fcd7fc859d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":768.75,\"y\":408.75,\"z\":3000,\"width\":480,\"height\":300,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fda_drug top_3_lowest_approvals.approval_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fda_drug top_3_lowest_approvals.number_of_drugs_approved)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug top_3_lowest_approvals\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_year\"},\"Name\":\"fda_drug top_3_lowest_approvals.approval_year\",\"NativeReferenceName\":\"approval_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"number_of_drugs_approved\"}},\"Function\":0},\"Name\":\"Sum(fda_drug top_3_lowest_approvals.number_of_drugs_approved)\",\"NativeReferenceName\":\"Sum of number_of_drugs_approved\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"number_of_drugs_approved\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 3 Lowest Approvals'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 300.00,
+          "width": 480.00,
+          "x": 768.75,
+          "y": 408.75,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"eb8416a34c97b780711a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":409,\"width\":728,\"height\":300,\"z\":4000,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fda_drug ywise_appafter_2010.ApplicationYear\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fda_drug ywise_appafter_2010.TotalApplications)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug ywise_appafter_2010\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ApplicationYear\"},\"Name\":\"fda_drug ywise_appafter_2010.ApplicationYear\",\"NativeReferenceName\":\"ApplicationYear\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TotalApplications\"}},\"Function\":0},\"Name\":\"Sum(fda_drug ywise_appafter_2010.TotalApplications)\",\"NativeReferenceName\":\"Sum of TotalApplications\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TotalApplications\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"titleText\":{\"expr\":{\"Literal\":{\"Value\":\"'2010 onwards Total Applications'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 300.00,
+          "width": 728.00,
+          "x": 0.00,
+          "y": 409.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"ef5b4ed1c26748c1887c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":727.9574791192103,\"height\":409.17236142748675,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fda_drug drugs_approved_each_year.approval_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fda_drug drugs_approved_each_year.number_of_drugs_approved)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug drugs_approved_each_year\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_year\"},\"Name\":\"fda_drug drugs_approved_each_year.approval_year\",\"NativeReferenceName\":\"approval_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"number_of_drugs_approved\"}},\"Function\":0},\"Name\":\"Sum(fda_drug drugs_approved_each_year.number_of_drugs_approved)\",\"NativeReferenceName\":\"Sum of number_of_drugs_approved\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"number_of_drugs_approved\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 409.17,
+          "width": 727.96,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "MarketingStatus Product Segmentation",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection02a85a4b1c822e7b1062",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"f04d8fabc3c33003960c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":711.25,\"height\":598.75,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fda_drug mktstatus.ApprovedDrugs\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fda_drug topmarketingstatus.TotalApplications)\"}],\"Series\":[{\"queryRef\":\"fda_drug mktstatus.ProductMktStatus\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f1\",\"Entity\":\"fda_drug topmarketingstatus\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fda_drug mktstatus\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ApprovedDrugs\"},\"Name\":\"fda_drug mktstatus.ApprovedDrugs\",\"NativeReferenceName\":\"ApprovedDrugs\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"TotalApplications\"}},\"Function\":2},\"Name\":\"Sum(fda_drug topmarketingstatus.TotalApplications)\",\"NativeReferenceName\":\"Count of TotalApplications\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ProductMktStatus\"},\"Name\":\"fda_drug mktstatus.ProductMktStatus\",\"NativeReferenceName\":\"ProductMktStatus\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"TotalApplications\"}},\"Function\":2}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 598.75,
+          "width": 711.25,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "sponsors based approval trends",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection0d5c2d4ad1e650b95d4f",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"bb2834e72721db4e0a72\",\"layouts\":[{\"id\":0,\"position\":{\"x\":100,\"y\":100,\"z\":1000,\"width\":441.25,\"height\":418.75,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Baxter Healthcare is observed as getting steady approvals since 1975 until 2001. \",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"20pt\",\"color\":\"#1a1a1a\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 418.75,
+          "width": 441.25,
+          "x": 100.00,
+          "y": 100.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c971ef75db47250766df\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":1270,\"height\":676.25,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fda_drug sponsor_approval_trends.approval_year\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(fda_drug sponsor_approval_trends.approval_count)\"}],\"Series\":[{\"queryRef\":\"fda_drug sponsor_approval_trends.SponsorApplicant\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug sponsor_approval_trends\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_year\"},\"Name\":\"fda_drug sponsor_approval_trends.approval_year\",\"NativeReferenceName\":\"approval_year\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_count\"}},\"Function\":0},\"Name\":\"Sum(fda_drug sponsor_approval_trends.approval_count)\",\"NativeReferenceName\":\"Sum of approval_count\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SponsorApplicant\"},\"Name\":\"fda_drug sponsor_approval_trends.SponsorApplicant\",\"NativeReferenceName\":\"SponsorApplicant\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_count\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "filters": "[{\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fda_drug sponsor_approval_trends\"}},\"Property\":\"approval_count\"}},\"Function\":0}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug sponsor_approval_trends\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_count\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}},\"Right\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"approval_count\"}},\"Function\":0}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false},{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fda_drug sponsor_approval_trends\"}},\"Property\":\"SponsorApplicant\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug sponsor_approval_trends\",\"Type\":0}],\"Where\":[{\"Condition\":{\"And\":{\"Left\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SponsorApplicant\"}},\"Right\":{\"Literal\":{\"Value\":\"''\"}}}}}},\"Right\":{\"Not\":{\"Expression\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SponsorApplicant\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}}}}}}]},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 676.25,
+          "width": 1270.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "DosageFormGrouping",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection28ad83f2e640a5674924",
+      "ordinal": 4,
+      "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "FilteredMktStatus",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectione810d22ee6969aa25f3b",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2ceac92861b5b0b1b143\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":711.25,\"height\":640,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(fda_drug mktstatus.ApprovedDrugs)\"},{\"queryRef\":\"Sum(fda_drug topmarketingstatus.TotalApplications)\"}],\"Category\":[{\"queryRef\":\"fda_drug topmarketingstatus.ApplicationYear\",\"active\":true},{\"queryRef\":\"fda_drug mktstatus.ProductMktStatus\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug mktstatus\",\"Type\":0},{\"Name\":\"f1\",\"Entity\":\"fda_drug topmarketingstatus\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ApprovedDrugs\"}},\"Function\":0},\"Name\":\"Sum(fda_drug mktstatus.ApprovedDrugs)\",\"NativeReferenceName\":\"Sum of ApprovedDrugs\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"TotalApplications\"}},\"Function\":0},\"Name\":\"Sum(fda_drug topmarketingstatus.TotalApplications)\",\"NativeReferenceName\":\"Sum of TotalApplications\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ProductMktStatus\"},\"Name\":\"fda_drug mktstatus.ProductMktStatus\",\"NativeReferenceName\":\"ProductMktStatus\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"ApplicationYear\"},\"Name\":\"fda_drug topmarketingstatus.ApplicationYear\",\"NativeReferenceName\":\"ApplicationYear\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ApprovedDrugs\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "filters": "[]",
+          "height": 640.00,
+          "width": 711.25,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c751726cb0038e94c4d7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":731,\"y\":0,\"width\":549,\"height\":640,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"fda_drug topmarketingstatus.ApplicationYear\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fda_drug topmarketingstatus\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ApplicationYear\"},\"Name\":\"fda_drug topmarketingstatus.ApplicationYear\",\"NativeReferenceName\":\"ApplicationYear\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"singleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 640.00,
+          "width": 549.00,
+          "x": 731.00,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "TECApprovals",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionfca2a0ba716f49e453d8",
+      "ordinal": 5,
+      "visualContainers": [],
+      "width": 1280.00
+    }
+  ]
+}

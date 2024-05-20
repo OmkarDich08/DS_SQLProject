@@ -1,0 +1,308 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 282
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 6238.5580401778161,
+            "y": 205.70587140151878
+          },
+          "nodeIndex": "fda_drug regactiondate",
+          "nodeLineageTag": "ef81ae11-70dc-49c2-8b15-0a043a9bc209",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1430.5580401778161,
+            "y": 159.70587140151878
+          },
+          "nodeIndex": "fda_drug appdoc",
+          "nodeLineageTag": "c462583b-5419-4d82-abd6-255b6d3f19f9",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1146.5580401778161,
+            "y": 243.70587140151878
+          },
+          "nodeIndex": "fda_drug appdoctype_lookup",
+          "nodeLineageTag": "b28dba8e-cffe-48de-afc7-7c30bdd2ac42",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 294.18269278110955,
+            "y": 204.21728500845262
+          },
+          "nodeIndex": "fda_drug application",
+          "nodeLineageTag": "1519e9d2-fedd-41ea-b227-8bbc4174c107",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1704.5580401778161,
+            "y": 241.70587140151878
+          },
+          "nodeIndex": "fda_drug chemtypelookup",
+          "nodeLineageTag": "d07a019e-b01d-4bec-9f3e-98b975ba5242",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 862.55804017781611,
+            "y": -10
+          },
+          "nodeIndex": "fda_drug doctype_lookup",
+          "nodeLineageTag": "a10ec204-fdc6-4c7f-a404-6d6b4e8537c4",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1988.5580401778161,
+            "y": 253.70587140151878
+          },
+          "nodeIndex": "fda_drug drugs_approved_each_year",
+          "nodeLineageTag": "e04cfe1e-2f9a-460b-b424-d986e4ec0186",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2272.5580401778161,
+            "y": 241.70587140151878
+          },
+          "nodeIndex": "fda_drug highestteapprovalsbyyear",
+          "nodeLineageTag": "3b6747bb-9fa7-4fbb-8e21-2af92dc63854",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2556.5580401778161,
+            "y": 217.70587140151878
+          },
+          "nodeIndex": "fda_drug mktstatus",
+          "nodeLineageTag": "1d87aa6b-7524-48af-bd00-58a4641fd534",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 329.41174280303767
+          },
+          "nodeIndex": "fda_drug product",
+          "nodeLineageTag": "150da867-3310-49f3-8f49-4dbb6aaa09f5",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2840.5580401778161,
+            "y": 217.70587140151878
+          },
+          "nodeIndex": "fda_drug product_tecode",
+          "nodeLineageTag": "85ddc07f-a2ea-4c20-899a-239d6b786ddc",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3124.5580401778161,
+            "y": 217.70587140151878
+          },
+          "nodeIndex": "fda_drug productcategory",
+          "nodeLineageTag": "05b750da-6220-4860-bdc7-70ddc9abd5cd",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3408.5580401778161,
+            "y": 229.70587140151878
+          },
+          "nodeIndex": "fda_drug reviewclass_lookup",
+          "nodeLineageTag": "3de3e48d-5c3a-4951-bb09-34eaf8e90294",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3692.5580401778161,
+            "y": 229.70587140151878
+          },
+          "nodeIndex": "fda_drug sponsor_approval_trends",
+          "nodeLineageTag": "75086d8d-82b3-4d70-ab91-a7de77b44e15",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3976.5580401778161,
+            "y": 229.70587140151878
+          },
+          "nodeIndex": "fda_drug sponsors_rank",
+          "nodeLineageTag": "c2a00322-772b-4126-9e5d-0a1c5f4e26e4",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4260.5580401778161,
+            "y": 229.70587140151878
+          },
+          "nodeIndex": "fda_drug successfulforms",
+          "nodeLineageTag": "b3ac1156-324b-4094-94e7-641e8ca2d293",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4544.5580401778161,
+            "y": 205.70587140151878
+          },
+          "nodeIndex": "fda_drug tecode_approvals",
+          "nodeLineageTag": "0470ac8c-b781-4d8c-8f85-03dc84ec2611",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4828.5580401778161,
+            "y": 253.70587140151878
+          },
+          "nodeIndex": "fda_drug top_3_highest_approvals",
+          "nodeLineageTag": "9cc20cc4-7c86-461a-9621-53ac5a740937",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5112.5580401778161,
+            "y": 253.70587140151878
+          },
+          "nodeIndex": "fda_drug top_3_lowest_approvals",
+          "nodeLineageTag": "3f799acc-ce2d-4b9e-aa0b-2d472e0c02e3",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5396.5580401778161,
+            "y": 241.70587140151878
+          },
+          "nodeIndex": "fda_drug topmarketingstatus",
+          "nodeLineageTag": "b358b1e9-29f0-49be-b884-53d941ac19b6",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5680.5580401778161,
+            "y": 217.70587140151878
+          },
+          "nodeIndex": "fda_drug ytrends_succforms",
+          "nodeLineageTag": "05a42e61-cb5d-4576-a528-cc500766b561",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5964.5580401778161,
+            "y": 229.70587140151878
+          },
+          "nodeIndex": "fda_drug ywise_appafter_2010",
+          "nodeLineageTag": "4da41f20-cf83-4561-8ffe-46029629f4d2",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

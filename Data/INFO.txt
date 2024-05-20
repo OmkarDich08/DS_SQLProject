@@ -1,0 +1,27 @@
+https://www.kaggle.com/datasets/thedevastator/fda-approved-drugs-therapeutics/data
+
+About this dataset
+This dataset contains a wealth of information about FDA-approved human drugs and biological therapeutic products. 
+Whether you are studying the effects of drugs, exploring new treatment methods, or researching potential side effects, this database holds detailed insights into the approved medicines available to individuals today. 
+From brand names to generic prescriptions to over-the-counter products, you can access a variety of important details such as reviews, labels, approval letters and patient information. 
+Gain a comprehensive understanding of the drug products approved since 1939 to develop safer and more effective treatments for patients going forward
+
+How to use the dataset
+This dataset contains information about nearly all of the FDA-approved brand name and generic prescription drugs, as well as biological therapeutic products. It is important to note that most information is available for drug products approved since 1998, meaning that drugs approved before then may have less comprehensive data associated with them.
+
+To get started using this dataset, you should begin by familiarizing yourself with the available columns in the dataset:
+
+Drug Name--The name of the drug (brand name or generic).
+
+Active Ingredient(s)--A list of active ingredients present in each drug product.
+
+Dosage form--The physical form and route a patient takes a specific drug product (e.g., tablet taken orally).
+
+Approval Description--A summary of key features and benefits related to the approval process for each product.
+
+Route(s) -- The manner or way by which a medication has been formulated to be absorbed or introduced into an organism's system (e.g., oral ingestion, injection).
+
+Next, you will want to understand what type of queries can be run on this data set so that you can effectively search for specific items to analyze within your project goals:
+
+•You can search through column headers/specific terms in order to find information related to your query such as active ingredients, dosage forms or routes used by different products;
+•You can use simple comparison operators such as “=”, “<” and “>” to find ranges between certain values; •You can utilize Boolean operators such as “AND” & “OR” within SQL statements in order to combine two conditions together; •You can implement searching feature on multiple columns simultaneously using a combination of LIKE commands coupled with wildcard characters (); •Lastly you can build subqueries upon which more complicated queries are applied depending on your research objectives (these advanced scripts often incorporate functions like SUM(), AVG() etc.)

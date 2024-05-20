@@ -17,6 +17,10 @@
       {
         "name": "PBI_ProTooling",
         "value": "[\"DevMode\"]"
+      },
+      {
+        "name": "PBI_RemovedChildren",
+        "value": "[{\"remoteItemId\":{\"foreignKeyRelationship\":{\"fromTableLocalLineageTag\":\"150da867-3310-49f3-8f49-4dbb6aaa09f5\",\"fromColumnLocalLineageTag\":\"65bcb37c-40f5-4d54-9681-1eafbe04d8cf\",\"toTableLocalLineageTag\":\"1519e9d2-fedd-41ea-b227-8bbc4174c107\",\"toColumnLocalLineageTag\":\"31ce0d68-b384-49c4-9012-0a84db88d842\"}},\"objectType\":\"Relationship\"}]"
       }
     ],
     "culture": "en-US",
@@ -59,19 +63,6 @@
         "fromTable": "fda_drug appdoc",
         "toColumn": "AppDocType",
         "toTable": "fda_drug appdoctype_lookup"
-      },
-      {
-        "name": "a9c19129-eddf-4310-a99a-a2fa475a706f",
-        "annotations": [
-          {
-            "name": "PBI_IsFromSource",
-            "value": "FS"
-          }
-        ],
-        "fromColumn": "ApplNo",
-        "fromTable": "fda_drug product",
-        "toColumn": "ApplNo",
-        "toTable": "fda_drug application"
       },
       {
         "name": "e796f72a-79ed-4cf5-8631-4b8ea182c484",
@@ -133,6 +124,15 @@
         "fromTable": "fda_drug application",
         "toColumn": "ChemicalTypeID",
         "toTable": "fda_drug chemtypelookup"
+      },
+      {
+        "name": "6270d0e6-bd45-4403-8cd3-2c9b00b162b7",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "Dosage",
+        "fromTable": "fda_drug productcategory",
+        "toCardinality": "many",
+        "toColumn": "Form",
+        "toTable": "fda_drug successfulforms"
       }
     ],
     "sourceQueryCulture": "en-US",
@@ -2222,7 +2222,7 @@
             "formatString": "0",
             "lineageTag": "65bcb37c-40f5-4d54-9681-1eafbe04d8cf",
             "sourceColumn": "ApplNo",
-            "summarizeBy": "none"
+            "summarizeBy": "sum"
           },
           {
             "name": "ProductNo",

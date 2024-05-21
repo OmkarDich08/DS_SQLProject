@@ -54,6 +54,7 @@
 
    ![TECApprovals](/Data/TEC.PNG)
 
+[Visualizations](https://app.powerbi.com/reportEmbed?reportId=abafcc74-4aea-47d3-9870-41f5299bac82&autoAuth=true&ctid=b83a511a-e5da-44e1-a5bd-2b03fa460cd2)
 
 
 
